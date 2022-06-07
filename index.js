@@ -1,10 +1,3 @@
-fetch('https://projectmoahamed.herokuapp.com/data')
+fetch('https://projectmoahamed.herokuapp.com/')
   .then(response => response.json())
-  .then(json => {
-      students = document.getElementById('Students')
-      json.Sheet1.forEach(s => {
-          let option = document.createElement('option')
-          option.innerHTML = s["A"]
-          students.appendChild(option)
-      });
-  })
+  .then(json => console.log(json))
